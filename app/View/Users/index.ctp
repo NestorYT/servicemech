@@ -32,6 +32,13 @@
                     array('action' => 'edit', $user['User']['id'])
                 );
             ?>
+            <?php
+                echo $this->Form->postLink(
+                    'Delete',
+                    array('action' => 'delete', $user['User']['id']),
+                    array('confirm' => 'Are you sure?')
+                );
+            ?>
         </td>
     </tr>
     <?php endforeach; ?>
